@@ -1,23 +1,24 @@
-# Neon Quiz ✦
+# Neon Quiz
 
-A responsive, no-build quiz game made with plain HTML, CSS, and JavaScript.
+A responsive, single-file trivia game with English, Bengali (বাংলা), and Hindi (हिन्दी) interface support.
 
 ## Features
-- Four categories: Mixed Bag, Science, Tech & Code, and World Trivia
-- Randomized five-question rounds
-- Instant answer feedback and explanations
-- Points, progress bar, result screen, and locally saved best score
-- Responsive layout, keyboard focus styles, and reduced-motion support
-- No dependencies or build step
+- Choose Mixed, Science, Tech & Code, or World Trivia
+- Fetches fresh multiple-choice questions from the [Open Trivia Database](https://opentdb.com/api_config.php)
+- Uses the MyMemory translation API to translate fetched questions into Bengali or Hindi, with translation caching in the browser
+- Includes a small built-in multilingual question bank if the quiz API is unavailable
+- Score tracking, progress bar, instant feedback, and a locally saved best score
+- Mobile-friendly layout; no build tools required
 
 ## Run locally
-Open `index.html` in any modern browser.
+Open `index.html` in a browser with an internet connection. The live question and translation APIs need internet access; built-in questions remain available if the quiz API fails.
 
-## Deploy with GitHub Pages
-1. Create a GitHub repository named `neon-quiz`.
-2. Upload `index.html` and `README.md` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
-5. Wait for the Pages deployment to finish. The site URL will be shown on the Pages settings screen.
+## Publish on GitHub Pages
+1. Upload `index.html` to the root of your GitHub Pages repository.
+2. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+3. Open your published Pages URL after deployment finishes.
 
-The game is static, so it does not need a server or environment variables.
+## API notes
+- Quiz data: Open Trivia Database (`https://opentdb.com/api.php`)
+- Bengali/Hindi translation: MyMemory (`https://api.mymemory.translated.net/get`)
+- Translation availability and accuracy depend on the public translation service and internet access.
